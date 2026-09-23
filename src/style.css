@@ -102,7 +102,7 @@ footer {
 }
 
 .lang-toggle {
-  @apply flex overflow-hidden rounded-lg border border-helm-border bg-helm-card/70 text-xs font-semibold;
+  @apply flex overflow-hidden rounded-xl border border-helm-border bg-helm-card/70 text-xs font-semibold;
 }
 
 .lang-btn {
@@ -117,8 +117,17 @@ footer {
   @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-teal-400 to-cyan-400 px-4 py-2.5 text-sm font-semibold text-helm-bg shadow-lg shadow-teal-500/25 transition hover:brightness-110;
 }
 
+/* Nav CTA: own display rules so .btn-primary cannot override `hidden` */
+.btn-nav {
+  @apply hidden items-center justify-center rounded-xl bg-gradient-to-r from-teal-400 to-cyan-400 px-3 py-2 text-xs font-semibold text-helm-bg shadow-md shadow-teal-500/20 transition hover:brightness-110 md:inline-flex;
+}
+
 .btn-ghost {
   @apply inline-flex items-center justify-center rounded-xl border border-helm-border bg-helm-card/50 px-4 py-2.5 text-sm font-medium text-slate-200 transition hover:border-teal-400/40 hover:bg-helm-card;
+}
+
+.cta-text-link {
+  @apply text-sm font-medium text-slate-400 underline-offset-4 transition hover:text-teal-300 hover:underline;
 }
 
 .platform-row {
@@ -129,7 +138,7 @@ footer {
 }
 
 .platform-pill {
-  @apply flex flex-col gap-0.5 rounded-xl border border-helm-border bg-helm-card/50 px-3.5 py-2;
+  @apply flex flex-col gap-0.5 rounded-xl border border-helm-border/80 bg-helm-card/35 px-3.5 py-2;
 }
 
 .platform-name {
@@ -137,7 +146,7 @@ footer {
 }
 
 .platform-status {
-  @apply text-xs text-slate-500;
+  @apply text-xs text-slate-400;
 }
 
 .gradient-text {
@@ -198,7 +207,7 @@ footer {
 }
 
 .gallery-cap {
-  @apply border-t border-helm-border/80 px-4 py-3 text-sm text-slate-400;
+  @apply border-t border-helm-border/80 px-4 py-3 text-sm text-slate-300;
 }
 
 .trust-item {
@@ -255,7 +264,7 @@ footer {
   }
 }
 
-/* Reveal on scroll */
+/* Reveal on scroll — visible by default for print / no-motion */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -271,6 +280,13 @@ footer {
 
 .reveal-delay {
   transition-delay: 0.12s;
+}
+
+@media print {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

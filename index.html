@@ -23,6 +23,14 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
   </head>
   <body class="bg-helm-bg text-slate-100 antialiased">
     <a
@@ -79,7 +87,7 @@
             <button type="button" data-lang="en" class="lang-btn" aria-pressed="true">EN</button>
             <button type="button" data-lang="es" class="lang-btn" aria-pressed="false">ES</button>
           </div>
-          <a href="#cta" class="btn-primary hidden sm:inline-flex" data-i18n="nav_cta">Coming soon</a>
+          <a href="#cta" class="btn-nav" data-i18n="nav_cta">Coming soon</a>
           <button
             type="button"
             id="menu-btn"
@@ -120,7 +128,7 @@
       <!-- Hero -->
       <section id="top" class="relative overflow-hidden pt-28 sm:pt-32">
         <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:pb-28">
-          <div class="reveal">
+          <div class="reveal max-lg:order-2">
             <p
               class="mb-4 inline-flex items-center gap-2 rounded-full border border-teal-400/20 bg-teal-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-teal-300"
               data-i18n="hero_eyebrow"
@@ -141,7 +149,7 @@
               </span>
               <a
                 href="https://heribertolord96.github.io/mediahelm-legal/#privacy"
-                class="btn-ghost"
+                class="cta-text-link"
                 data-i18n="cta_secondary"
                 >Privacy &amp; Terms</a
               >
@@ -156,14 +164,14 @@
                 <span class="platform-status" data-i18n="platform_ios">In progress · App Store</span>
               </li>
             </ul>
-            <p class="mt-4 text-sm text-slate-500" data-i18n="cta_note">
+            <p class="mt-4 text-sm text-slate-400" data-i18n="cta_note">
               Free donationware — no ads, no account, no paywall. Not listed yet.
             </p>
           </div>
 
-          <div class="reveal reveal-delay relative">
+          <div class="reveal reveal-delay relative max-lg:order-1">
             <div class="hero-glow" aria-hidden="true"></div>
-            <div class="phone-frame mx-auto max-w-sm">
+            <div class="phone-frame mx-auto max-w-[15.5rem] sm:max-w-sm">
               <img
                 src="/branding/screenshots/01_hero_cast_queue.jpg"
                 alt="MediaHelm Queue casting to a TV"
@@ -297,18 +305,7 @@
             <h2 class="section-title" data-i18n="gallery_title">See it in action</h2>
           </div>
 
-          <div class="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
-            <figure class="gallery-card reveal">
-              <img
-                src="/branding/screenshots/01_hero_cast_queue.jpg"
-                alt="Queue casting lifestyle"
-                class="gallery-img"
-                loading="lazy"
-                width="747"
-                height="1424"
-              />
-              <figcaption class="gallery-cap" data-i18n="gal_1">Queue · casting to TV</figcaption>
-            </figure>
+          <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
             <figure class="gallery-card reveal">
               <img
                 src="/branding/screenshots/02_settings_cast.png"
@@ -320,7 +317,7 @@
               />
               <figcaption class="gallery-cap" data-i18n="gal_2">Settings · linked Cast device</figcaption>
             </figure>
-            <figure class="gallery-card reveal reveal-delay">
+            <figure class="gallery-card reveal">
               <img
                 src="/branding/screenshots/03_queue_hls.png"
                 alt="Queue HLS remote controls"

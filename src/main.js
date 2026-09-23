@@ -203,22 +203,33 @@ function initMobileNav() {
 
 function initReveal() {
   const nodes = document.querySelectorAll('.reveal')
-  if (!('IntersectionObserver' in window)) {
-    nodes.forEach((n) => n.classList.add('is-visible'))
+  if (!nodes.length) return
+
+  const show = (n) => n.classList.add('is-visible')
+
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    nodes.forEach(show)
     return
   }
+
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) {
-          e.target.classList.add('is-visible')
+          show(e.target)
           io.unobserve(e.target)
         }
       })
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+    { threshold: 0.08, rootMargin: '0px 0px -5% 0px' },
   )
-  nodes.forEach((n) => io.observe(n))
+
+  nodes.forEach((n) => {
+    const rect = n.getBoundingClientRect()
+    const inView = rect.top < window.innerHeight * 0.92 && rect.bottom > 0
+    if (inView) show(n)
+    else io.observe(n)
+  })
 }
 
 initLang()
