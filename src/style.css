@@ -121,6 +121,25 @@ footer {
   @apply inline-flex items-center justify-center rounded-xl border border-helm-border bg-helm-card/50 px-4 py-2.5 text-sm font-medium text-slate-200 transition hover:border-teal-400/40 hover:bg-helm-card;
 }
 
+.platform-row {
+  @apply flex flex-wrap gap-2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.platform-pill {
+  @apply flex flex-col gap-0.5 rounded-xl border border-helm-border bg-helm-card/50 px-3.5 py-2;
+}
+
+.platform-name {
+  @apply text-sm font-semibold text-slate-100;
+}
+
+.platform-status {
+  @apply text-xs text-slate-500;
+}
+
 .gradient-text {
   background: linear-gradient(120deg, #2dd4bf 0%, #22d3ee 45%, #38bdf8 100%);
   -webkit-background-clip: text;
