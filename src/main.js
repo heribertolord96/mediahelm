@@ -53,6 +53,7 @@ const strings = {
     gal_2: 'Settings · linked Cast device',
     gal_3: 'Queue · HLS remote controls',
     gal_4: 'TV · in-app Play (public demo channel)',
+    gal_browser: 'Browser · detected streams',
     trust_label: 'Free & fair',
     trust_title: 'Donationware you can trust',
     trust_sub:
@@ -117,6 +118,7 @@ const strings = {
     gal_2: 'Ajustes · dispositivo Cast enlazado',
     gal_3: 'Cola · controles remotos HLS',
     gal_4: 'TV · Play en la app (canal demo público)',
+    gal_browser: 'Navegador · streams detectados',
     trust_label: 'Gratis y justo',
     trust_title: 'Donationware de confianza',
     trust_sub:
