@@ -161,12 +161,21 @@ footer {
 }
 
 .gallery-card {
-  @apply overflow-hidden rounded-2xl border border-helm-border bg-helm-card/40 transition duration-500 hover:border-teal-400/25;
+  @apply flex flex-col overflow-hidden rounded-2xl border border-helm-border bg-helm-card/40 transition duration-500 hover:border-teal-400/25;
 }
 
+/* Phone screenshots are portrait — show full frame, never cover-crop */
 .gallery-img {
-  @apply w-full object-cover object-top transition duration-700 hover:scale-[1.02];
-  max-height: 520px;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #070d18;
+  transition: transform 0.7s ease;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.015);
 }
 
 .gallery-cap {
@@ -211,9 +220,10 @@ footer {
 .phone-shot {
   display: block;
   width: 100%;
+  height: auto;
   border-radius: 1.25rem;
-  object-fit: cover;
-  max-height: 560px;
+  object-fit: contain;
+  background: #070d18;
 }
 
 @keyframes phone-float {
