@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MediaHelm — Play web, files & TV on your phone. Cast to your LAN when ready. Free donationware for Android."
+    />
+    <meta name="theme-color" content="#0B1220" />
+    <meta property="og:title" content="MediaHelm" />
+    <meta
+      property="og:description"
+      content="Play-first LAN media for Android. Browser, Files, TV & Queue — Cast when linked."
+    />
+    <meta property="og:image" content="https://heribertolord96.github.io/mediahelm/branding/play_store/feature_graphic_1024x500.png" />
+    <meta property="og:type" content="website" />
+    <title>MediaHelm — Play on phone, Cast when linked</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-helm-bg text-slate-100 antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-helm-card focus:px-4 focus:py-2"
+    >
+      Skip to content
+    </a>
+
+    <div class="ambient" aria-hidden="true">
+      <div class="ambient-blob ambient-blob-a"></div>
+      <div class="ambient-blob ambient-blob-b"></div>
+      <div class="ambient-grid"></div>
+    </div>
+
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-[background,border-color,backdrop-filter] duration-300"
+    >
+      <div
+        class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6"
+      >
+        <a href="#top" class="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight">
+          <img
+            src="/branding/play_store/app_icon_512.png"
+            alt=""
+            width="32"
+            height="32"
+            class="h-8 w-8 rounded-lg shadow-lg shadow-teal-500/20"
+          />
+          <span>MediaHelm</span>
+        </a>
+
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
+          <a class="nav-link" href="#features" data-i18n="nav_features">Features</a>
+          <a class="nav-link" href="#how" data-i18n="nav_how">How it works</a>
+          <a class="nav-link" href="#gallery" data-i18n="nav_gallery">Gallery</a>
+          <a
+            class="nav-link"
+            href="https://heribertolord96.github.io/mediahelm-legal/#privacy"
+            data-i18n="nav_privacy"
+            >Privacy</a
+          >
+          <a
+            class="nav-link"
+            href="https://heribertolord96.github.io/mediahelm-legal/#terms"
+            data-i18n="nav_terms"
+            >Terms</a
+          >
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en" class="lang-btn" aria-pressed="true">EN</button>
+            <button type="button" data-lang="es" class="lang-btn" aria-pressed="false">ES</button>
+          </div>
+          <a href="#cta" class="btn-primary hidden sm:inline-flex" data-i18n="nav_cta">Coming soon</a>
+          <button
+            type="button"
+            id="menu-btn"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-helm-border bg-helm-card/60 md:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+            aria-label="Menu"
+          >
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="hidden border-t border-helm-border bg-helm-bg/95 px-4 py-3 backdrop-blur-xl md:hidden">
+        <div class="flex flex-col gap-1">
+          <a class="nav-link-mobile" href="#features" data-i18n="nav_features">Features</a>
+          <a class="nav-link-mobile" href="#how" data-i18n="nav_how">How it works</a>
+          <a class="nav-link-mobile" href="#gallery" data-i18n="nav_gallery">Gallery</a>
+          <a
+            class="nav-link-mobile"
+            href="https://heribertolord96.github.io/mediahelm-legal/#privacy"
+            data-i18n="nav_privacy"
+            >Privacy</a
+          >
+          <a
+            class="nav-link-mobile"
+            href="https://heribertolord96.github.io/mediahelm-legal/#terms"
+            data-i18n="nav_terms"
+            >Terms</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section id="top" class="relative overflow-hidden pt-28 sm:pt-32">
+        <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:pb-28">
+          <div class="reveal">
+            <p
+              class="mb-4 inline-flex items-center gap-2 rounded-full border border-teal-400/20 bg-teal-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-teal-300"
+              data-i18n="hero_eyebrow"
+            >
+              Android · LAN media
+            </p>
+            <h1 class="font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+              <span data-i18n="hero_title_a">Play on your phone.</span>
+              <span class="gradient-text block" data-i18n="hero_title_b">Cast when linked.</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg" data-i18n="hero_sub">
+              MediaHelm is a play-first media app: browse the web, open local files, and watch TV channels on your
+              phone — then cast to a device on your Wi‑Fi when you want to.
+            </p>
+            <div id="cta" class="mt-8 flex flex-wrap items-center gap-3 scroll-mt-28">
+              <span class="btn-primary pointer-events-none opacity-90" data-i18n="cta_primary">
+                Coming soon on Google Play
+              </span>
+              <a
+                href="https://heribertolord96.github.io/mediahelm-legal/#privacy"
+                class="btn-ghost"
+                data-i18n="cta_secondary"
+                >Privacy &amp; Terms</a
+              >
+            </div>
+            <p class="mt-4 text-sm text-slate-500" data-i18n="cta_note">
+              Free donationware — no ads, no account, no paywall.
+            </p>
+          </div>
+
+          <div class="reveal reveal-delay relative">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="phone-frame mx-auto max-w-sm">
+              <img
+                src="/branding/screenshots/01_hero_cast_queue.jpg"
+                alt="MediaHelm Queue casting to a TV"
+                class="phone-shot"
+                width="560"
+                height="1120"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="scroll-mt-24 border-t border-helm-border/60 py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-label" data-i18n="features_label">What you can do</p>
+            <h2 class="section-title" data-i18n="features_title">One app for web, files, TV &amp; cast</h2>
+            <p class="mt-3 text-slate-400" data-i18n="features_sub">
+              Built for your local network — discovery and media stay on the LAN.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M12 3c2.5 2.7 3.75 5.7 3.75 9S14.5 18.3 12 21c-2.5-2.7-3.75-5.7-3.75-9S9.5 5.7 12 3z" />
+                </svg>
+              </div>
+              <h3 class="feature-title" data-i18n="feat_browser_title">Browser</h3>
+              <p class="feature-desc" data-i18n="feat_browser_desc">
+                Multi-tab WebView with stream detection. Prefers HLS playlists when available.
+              </p>
+            </article>
+
+            <article class="feature-card reveal reveal-delay">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5A2.5 2.5 0 015.5 5h4L12 7h6.5A2.5 2.5 0 0121 9.5v7A2.5 2.5 0 0118.5 19h-13A2.5 2.5 0 013 16.5v-9z" />
+                </svg>
+              </div>
+              <h3 class="feature-title" data-i18n="feat_files_title">Files</h3>
+              <p class="feature-desc" data-i18n="feat_files_desc">
+                Library &amp; storage (SAF). Cache and relay over LAN — no cloud upload of your media.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16v9H4V7zm4 12h8M9 21h6" />
+                </svg>
+              </div>
+              <h3 class="feature-title" data-i18n="feat_tv_title">TV</h3>
+              <p class="feature-desc" data-i18n="feat_tv_desc">
+                Public demo HLS channels in-app, plus your own M3U. Local Play works without a Cast device.
+              </p>
+            </article>
+
+            <article class="feature-card reveal reveal-delay">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h10M4 18h7" />
+                  <circle cx="18" cy="15" r="3" />
+                </svg>
+              </div>
+              <h3 class="feature-title" data-i18n="feat_queue_title">Queue</h3>
+              <p class="feature-desc" data-i18n="feat_queue_desc">
+                Build a playback queue and control remote playback when a receiver is linked.
+              </p>
+            </article>
+
+            <article class="feature-card reveal sm:col-span-2 lg:col-span-2">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 15.5A4.5 4.5 0 017.5 11H9M3 19a8 8 0 018-8h1M3 22.5A11.5 11.5 0 0114.5 11H21" />
+                </svg>
+              </div>
+              <h3 class="feature-title" data-i18n="feat_cast_title">Cast</h3>
+              <p class="feature-desc" data-i18n="feat_cast_desc">
+                First-class Chromecast and Google TV / Android TV with Cast. Best-effort DLNA and Roku. Not official
+                partner Cast for YouTube/Netflix — and not a promise to work on every smart TV.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="scroll-mt-24 border-t border-helm-border/60 py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-label" data-i18n="how_label">How it works</p>
+            <h2 class="section-title" data-i18n="how_title">Three steps on your Wi‑Fi</h2>
+          </div>
+
+          <ol class="mt-12 grid gap-6 md:grid-cols-3">
+            <li class="step-card reveal">
+              <span class="step-num">01</span>
+              <h3 class="mt-4 font-display text-xl font-semibold" data-i18n="how_1_title">Play on phone</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400" data-i18n="how_1_desc">
+                Open Browser, Files, or TV. Preview and play locally — no receiver required.
+              </p>
+            </li>
+            <li class="step-card reveal reveal-delay">
+              <span class="step-num">02</span>
+              <h3 class="mt-4 font-display text-xl font-semibold" data-i18n="how_2_title">Link a device</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400" data-i18n="how_2_desc">
+                Discover Chromecast, Google TV, or try DLNA / Roku on the same network.
+              </p>
+            </li>
+            <li class="step-card reveal">
+              <span class="step-num">03</span>
+              <h3 class="mt-4 font-display text-xl font-semibold" data-i18n="how_3_title">Cast on LAN</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400" data-i18n="how_3_desc">
+                MediaHelm relays over your LAN so the TV can fetch the stream — your files stay local.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="scroll-mt-24 border-t border-helm-border/60 py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="section-label" data-i18n="gallery_label">Gallery</p>
+            <h2 class="section-title" data-i18n="gallery_title">See it in action</h2>
+          </div>
+
+          <div class="mt-12 grid gap-5 sm:grid-cols-2">
+            <figure class="gallery-card reveal sm:col-span-2">
+              <img
+                src="/branding/screenshots/01_hero_cast_queue.jpg"
+                alt="Queue casting lifestyle"
+                class="gallery-img"
+                loading="lazy"
+                width="1120"
+                height="630"
+              />
+              <figcaption class="gallery-cap" data-i18n="gal_1">Queue · casting to TV</figcaption>
+            </figure>
+            <figure class="gallery-card reveal">
+              <img
+                src="/branding/screenshots/02_settings_cast.png"
+                alt="Settings with linked Chromecast"
+                class="gallery-img"
+                loading="lazy"
+                width="560"
+                height="1120"
+              />
+              <figcaption class="gallery-cap" data-i18n="gal_2">Settings · linked Cast device</figcaption>
+            </figure>
+            <figure class="gallery-card reveal reveal-delay">
+              <img
+                src="/branding/screenshots/03_queue_hls.png"
+                alt="Queue HLS remote controls"
+                class="gallery-img"
+                loading="lazy"
+                width="560"
+                height="1120"
+              />
+              <figcaption class="gallery-cap" data-i18n="gal_3">Queue · HLS remote controls</figcaption>
+            </figure>
+            <figure class="gallery-card reveal sm:col-span-2">
+              <img
+                src="/branding/screenshots/04_tv_pbs_kids.png"
+                alt="TV inline player with PBS Kids demo"
+                class="gallery-img"
+                loading="lazy"
+                width="1120"
+                height="630"
+              />
+              <figcaption class="gallery-cap" data-i18n="gal_4">TV · in-app Play (public demo channel)</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust -->
+      <section id="trust" class="scroll-mt-24 border-t border-helm-border/60 py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="reveal overflow-hidden rounded-3xl border border-helm-border bg-gradient-to-br from-helm-card via-helm-bg to-teal-950/40 p-8 sm:p-12">
+            <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p class="section-label" data-i18n="trust_label">Free &amp; fair</p>
+                <h2 class="section-title" data-i18n="trust_title">Donationware you can trust</h2>
+                <p class="mt-3 text-slate-400" data-i18n="trust_sub">
+                  Optional tips via Google Play Billing thank you only — nothing unlocks behind a paywall.
+                </p>
+              </div>
+              <ul class="space-y-4">
+                <li class="trust-item reveal">
+                  <span class="trust-dot"></span>
+                  <span data-i18n="trust_1">No MediaHelm account required</span>
+                </li>
+                <li class="trust-item reveal reveal-delay">
+                  <span class="trust-dot"></span>
+                  <span data-i18n="trust_2">No ads, no paywall, no feature locks</span>
+                </li>
+                <li class="trust-item reveal">
+                  <span class="trust-dot"></span>
+                  <span data-i18n="trust_3">Casting uses a local relay on your network</span>
+                </li>
+                <li class="trust-item reveal reveal-delay">
+                  <span class="trust-dot"></span>
+                  <span data-i18n="trust_4">You choose the sites and playlists you open</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-helm-border/60 py-12">
+      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 sm:flex-row sm:items-start sm:justify-between sm:px-6">
+        <div>
+          <div class="flex items-center gap-2 font-display text-lg font-semibold">
+            <img src="/branding/play_store/app_icon_512.png" alt="" class="h-7 w-7 rounded-md" width="28" height="28" />
+            MediaHelm
+          </div>
+          <p class="mt-2 max-w-sm text-sm text-slate-500" data-i18n="footer_tag">
+            Play-first LAN media for Android. <code class="text-slate-400">com.mediahelm.app</code>
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm">
+          <a class="footer-link" href="mailto:heribertolord@gmail.com" data-i18n="footer_contact">Contact</a>
+          <a class="footer-link" href="https://heribertolord96.github.io/" data-i18n="footer_portfolio">Portfolio</a>
+          <a
+            class="footer-link"
+            href="https://heribertolord96.github.io/mediahelm-legal/#privacy"
+            data-i18n="nav_privacy"
+            >Privacy</a
+          >
+          <a
+            class="footer-link"
+            href="https://heribertolord96.github.io/mediahelm-legal/#terms"
+            data-i18n="nav_terms"
+            >Terms</a
+          >
+        </div>
+      </div>
+      <p class="mx-auto mt-8 max-w-6xl px-4 text-xs text-slate-600 sm:px-6" data-i18n="footer_copy">
+        © MediaHelm. Not affiliated with Google, YouTube, Netflix, or Chromecast trademarks beyond fair use of device
+        compatibility.
+      </p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
